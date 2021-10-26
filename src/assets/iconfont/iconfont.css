@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2766919 */
+  src: url('//at.alicdn.com/t/font_2766919_l558g3ucbu.woff2?t=1632060208270') format('woff2'),
+       url('//at.alicdn.com/t/font_2766919_l558g3ucbu.woff?t=1632060208270') format('woff'),
+       url('//at.alicdn.com/t/font_2766919_l558g3ucbu.ttf?t=1632060208270') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cibiaoquanyi:before {
+  content: "\e671";
+}
+
+.icon-add:before {
+  content: "\e666";
+}
+
+.icon-vip1:before {
+  content: "\e65b";
+}
+
+.icon-play1:before {
+  content: "\e60e";
+}
+
+.icon-myfavorite:before {
+  content: "\e642";
+}
+
+.icon-xihuan:before {
+  content: "\e64b";
+}
+
+.icon-like:before {
+  content: "\e62c";
+}
+
+.icon-danqu:before {
+  content: "\e636";
+}
+
+.icon-songplaylist:before {
+  content: "\e631";
+}
+
+.icon-orderplay:before {
+  content: "\e64c";
+}
+
+.icon-random:before {
+  content: "\e609";
+}
+
+.icon-down-arrow:before {
+  content: "\e65e";
+}
+
+.icon-delete:before {
+  content: "\e630";
+}
+
+.icon-jingyin:before {
+  content: "\e699";
+}
+
+.icon-laba:before {
+  content: "\e607";
+}
+
+.icon-loop:before {
+  content: "\e6e3";
+}
+
+.icon-play:before {
+  content: "\e618";
+}
+
+.icon-xiayiqu:before {
+  content: "\e7ff";
+}
+
+.icon-shangyiqu:before {
+  content: "\e800";
+}
+
+.icon-pause:before {
+  content: "\e614";
+}
+
+.icon-comment:before {
+  content: "\e606";
+}
+
+.icon-guanbi:before {
+  content: "\e635";
+}
+
+.icon-biaogebeifen:before {
+  content: "\e6a3";
+}
+
+.icon-card:before {
+  content: "\e605";
+}
+
+.icon-mv:before {
+  content: "\e604";
+}
+
+.icon-yinyue:before {
+  content: "\e603";
+}
+
+.icon-zhuanji:before {
+  content: "\e62d";
+}
+
+.icon-shipin1:before {
+  content: "\e71f";
+}
+
+.icon-shuaxin:before {
+  content: "\e7d3";
+}
+
+.icon-shangyiye:before {
+  content: "\e769";
+}
+
+.icon-xiayiye:before {
+  content: "\e76e";
+}
+
+.icon-play-square:before {
+  content: "\eb16";
+}
+
+.icon-yinle:before {
+  content: "\e62e";
+}
+
+.icon-user:before {
+  content: "\e841";
+}
+
+.icon-dianzan:before {
+  content: "\e602";
+}
+
+.icon-pinglun:before {
+  content: "\e600";
+}
+
+.icon-zuixin:before {
+  content: "\e764";
+}
+
+.icon-gedan:before {
+  content: "\e74a";
+}
+
+.icon-yinyueclick:before {
+  content: "\e601";
+}
+
