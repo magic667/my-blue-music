@@ -123,7 +123,8 @@ export default {
       // 滚动到歌单开始位置
       let view = document.querySelector(".view");
       view.scrollTo({
-        top: this.$refs.tagsnav.offsetTop - 60,
+        behavior: "smooth",
+        top: this.$refs.tagsnav.offsetTop - 65,
       });
     },
   },
@@ -134,6 +135,7 @@ export default {
 .tagsnav {
   margin-top: 30px;
 }
+
 .songlist {
   margin-top: 20px;
 }

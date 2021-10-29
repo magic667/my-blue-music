@@ -59,7 +59,7 @@ export default {
     });
     // 定义一个时间戳，每次获得最新的数据
     let timestamp = Date.parse(new Date());
-    getPersonalized(12, timestamp).then((res) => {
+    getPersonalized(18, timestamp).then((res) => {
       this.personalized = res.data.result;
     });
     getNewsong(15)

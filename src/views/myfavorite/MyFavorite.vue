@@ -1,5 +1,5 @@
 <template>
-  <div class="my-favourite">
+  <div class="my-favourite w">
     <div class="logined" v-if="$store.state.isLogin">
       <!-- 顶部tab栏 -->
       <div class="top-nav">

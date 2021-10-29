@@ -172,13 +172,6 @@ export default {
       "playModel",
     ]),
   },
-  // watach: {
-  //   nowSongDetail() {
-  //     if (this.$store.state.isLogin) {
-  //       this.isLikeNowSong();
-  //     }
-  //   },
-  // },
   methods: {
     // 显示播放列表
     showPlayingList() {

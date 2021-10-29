@@ -33,12 +33,14 @@ export default {
 .el-menu {
   border: 0;
 }
+
 .el-menu-item {
   color: #303133;
   height: 45px;
   line-height: 45px;
   font-size: 16px;
 }
+
 .el-menu--horizontal > .el-menu-item.is-active {
   border-bottom: 3px solid #5292fe;
   font-size: 18px;

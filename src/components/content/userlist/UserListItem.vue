@@ -74,5 +74,15 @@ export default {
     text-overflow: ellipsis;
     overflow: hidden;
   }
+
+  .info {
+    span:first-child {
+      margin-right: 15px;
+    }
+
+    span {
+      font-size: 12px;
+    }
+  }
 }
 </style>

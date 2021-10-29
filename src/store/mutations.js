@@ -50,11 +50,10 @@ export default {
   // 保存当前播放歌曲详情，并添加当前播放歌曲到历史记录
   saveSongDetail(state, payload) {
     state.nowSongDetail = payload;
-    // 添加当前播放歌曲到历史记录
     let index = state.historyPlay.findIndex((item) => {
       return payload.id == item.id;
     });
-    // 如果列表不存在相同歌曲，再添加到播放历史列表
+    // 如果历史记录不存在相同歌曲，再添加到播放历史列表
     if (index == -1) {
       state.historyPlay.unshift(payload);
       localStorage.setItem('historyPlay', JSON.stringify(state.historyPlay));

@@ -6,7 +6,7 @@
     <!-- 播放列表 -->
     <div class="play-list" v-if="activeItem == 0">
       <div class="hd">
-        <h4 style="padding: 0px 10px">总{{ playingList.length }}首</h4>
+        <h4 style="padding: 0 20px">总{{ playingList.length }}首</h4>
         <span @click="deleteAll" style="cursor: pointer">
           <i class="iconfont icon-delete">清空</i>
         </span>
@@ -28,7 +28,7 @@
                 class="iconfont icon-laba"
                 v-if="scope.row.id == nowSongDetail.id"
               ></span>
-              <span v-else>{{ scope.row | formatIndex }}</span>
+              <span v-else>{{ scope.row.index | formatIndex }}</span>
             </template>
           </el-table-column>
           <el-table-column
@@ -70,7 +70,7 @@
     <!-- 历史记录 -->
     <div class="history-list" v-if="activeItem == 1">
       <div class="hd">
-        <h4 style="padding: 0 10px">总{{ historyPlay.length }}首</h4>
+        <h4 style="padding: 0 20px">总{{ historyPlay.length }}首</h4>
         <span style="cursor: pointer" @click="deleteAllHistory">
           <i class="iconfont icon-delete">清空</i>
         </span>
@@ -157,7 +157,7 @@ export default {
       if (index < 9) {
         return "0" + (index + 1);
       } else {
-        return;
+        return index + 1;
       }
     },
   },

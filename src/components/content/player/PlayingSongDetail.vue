@@ -91,12 +91,10 @@
 </template>
 
 <script>
-/* 网络请求 */
 import { getNowLyric, getSongComment } from "network/playmusic/playmusic";
-/* vuex */
 import { mapGetters } from "vuex";
-/* 子组件 */
 import CommentPage from "components/content/comment/CommentPage.vue";
+
 export default {
   name: "PlayingSongDetail",
   components: { CommentPage },
@@ -106,11 +104,11 @@ export default {
   data() {
     return {
       lyric: "",
-      formatlyric: [], //格式化后的歌词
-      currentRow: "", //当前播放的歌词行数
-      hotcomments: [], //热门评论
-      comments: [], //评论
-      commentCount: null, //评论总数
+      formatlyric: [], // 格式化后的歌词
+      currentRow: "", // 当前播放的歌词行数
+      hotcomments: [], // 热门评论
+      comments: [], // 评论
+      commentCount: null, // 评论总数
     };
   },
   created() {
@@ -127,11 +125,10 @@ export default {
     //   获取歌词
     getNowLyricBy(songId) {
       getNowLyric(songId).then((res) => {
-        // console.log(res);
-        // console.log(songId);
-        if (res.data.nolyric) return; //如果没有歌词就return
+        if (res.data.nolyric || !res.data.lrc) {
+          return;
+        }
         this.lyric = res.data.lrc.lyric;
-        // console.log(this.lyric);
         this.formatLyric(this.lyric);
       });
     },
@@ -172,7 +169,6 @@ export default {
       // 定义一个时间戳 每次获得最新的评论数据
       let timestamp = Date.parse(new Date());
       getSongComment(this.nowSongDetail.id, offset, timestamp).then((res) => {
-        // console.log(res);
         this.hotcomments = res.data.hotComments;
         this.comments = res.data.comments;
         this.commentCount = res.data.total;
@@ -188,7 +184,6 @@ export default {
         top: this.$refs.comment.offsetTop,
       });
     },
-
     // 去往专辑页面
     toAlbum() {
       this.$router.push("/albumdetail/" + this.nowSongDetail.al.id);
@@ -210,11 +205,13 @@ export default {
       // 遍历格式化后的歌词数组
       this.formatlyric.forEach((item, index) => {
         // 如果歌曲当前秒数和歌词数组中的秒数相等
-        if (Math.ceil(this.currentSecond) >= item.time) {
-          // let scrollLyric = document.querySelector("#scrollLyric");
-          // 修改position的top值实现滚动 设置的每行歌词高度为45px，所以每次移动索引号乘以45px
-          this.$refs.scrollLyric.style.top = -index * 45 + "px";
-          this.currentRow = index; //用于判断当前歌词高亮显示
+        if (this.currentSecond) {
+          if (Math.ceil(this.currentSecond) >= item.time) {
+            // let scrollLyric = document.querySelector("#scrollLyric");
+            // 修改position的top值实现滚动 设置的每行歌词高度为45px，所以每次移动索引号乘以45px
+            this.$refs.scrollLyric.style.top = -index * 45 + "px";
+            this.currentRow = index; //用于判断当前歌词高亮显示
+          }
         }
       });
     },
@@ -288,6 +285,7 @@ export default {
           transform-origin: 0 0;
           img {
             width: 100%;
+            cursor: default;
           }
         }
         .record {
@@ -300,6 +298,7 @@ export default {
             left: 0;
             img {
               width: 100%;
+              cursor: default;
             }
           }
           .cover {

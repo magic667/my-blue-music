@@ -20,7 +20,7 @@
           <div v-for="(item2, index2) in item.beReplied" :key="index2">
             <p>
               <span class="be-nickname" @click="toUserDetail(item.user.userId)"
-                >{{ item2.user.nickname }}：</span
+                >@{{ item2.user.nickname }}：</span
               >{{ item2.content }}
             </p>
           </div>
@@ -29,8 +29,9 @@
     </div>
     <!-- 点赞评论 -->
     <div class="like">
-      <span class="iconfont icon-dianzan">{{ item.likedCount }}</span>
-      <span class="iconfont icon-comment"></span>
+      <i class="iconfont icon-dianzan"></i
+      ><span class="like-count">{{ item.likedCount }}</span>
+      <i class="iconfont icon-comment"></i>
     </div>
   </div>
 </template>
@@ -113,7 +114,7 @@ export default {
 
         .be-nickname {
           font-weight: 700;
-          color: #3f3e3e9f;
+          color: #409eff;
         }
 
         span {
@@ -135,8 +136,9 @@ export default {
     padding-right: 20px;
     text-align: right;
 
-    span {
-      padding-right: 15px;
+    .like-count {
+      font-size: 12px;
+      padding: 0 8px 0 3px;
     }
   }
 }
