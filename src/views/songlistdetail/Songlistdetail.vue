@@ -14,7 +14,7 @@
           <SongTable :songs="songs" @reloading="reload" />
         </el-tab-pane>
         <!-- 歌单评论 -->
-        <el-tab-pane name="comment">
+        <el-tab-pane name="comment" ref="test">
           <span slot="label">评论({{ commentCount }})</span>
           <CommentPage
             :comments="comments"
