@@ -22,15 +22,3 @@ npm install
 ```
 npm run serve
 ```
-
-### 展示
-
-![](https://github.com/magic667/image/blob/main/1.png)
-
-![](C:\Users\Magic\Desktop\2.png)
-
-![](C:\Users\Magic\Desktop\222.png)
-
-![](C:\Users\Magic\Desktop\333.png)
-
-![](C:\Users\Magic\Desktop\4444.png)
