@@ -3,7 +3,7 @@
 ```
 需要本地node运行网易云音乐api：
 https://github.com/Binaryify/NeteaseCloudMusicApi
-
+```
 ## Project setup
 ```
 npm install
