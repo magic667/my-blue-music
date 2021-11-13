@@ -25,7 +25,7 @@ npm run serve
 
 ### 展示
 
-![](C:\Users\Magic\Desktop\1.png)
+![](https://github.com/magic667/image/blob/main/1.png)
 
 ![](C:\Users\Magic\Desktop\2.png)
 
