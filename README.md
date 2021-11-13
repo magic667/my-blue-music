@@ -3,6 +3,9 @@
 ### 介绍
 
 ```
+需要本地node运行网易云音乐api：https://github.com/Binaryify/NeteaseCloudMusicApi
+```
+```
 使用Vue全家桶+element-ui+axios+网易云音乐接口做的一个PC端音乐播放器项目。
 
 1.实现了多个页面的基本样式，包括歌单，排行榜，歌手，最新音乐，视频MV，用户主页等。
@@ -15,7 +18,6 @@
 ```
 npm install
 ```
-
 ### 运行
 ```
 npm run serve
@@ -32,3 +34,4 @@ npm run serve
 ![](C:\Users\Magic\Desktop\333.png)
 
 ![](C:\Users\Magic\Desktop\4444.png)
+=======
